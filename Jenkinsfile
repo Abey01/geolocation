@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean'
-                sh 'mv install'
+                sh 'mvn install'
                 sh 'mvn package'
             }
         }
@@ -20,7 +20,6 @@ pipeline {
          stage('Deploy') {
             steps {
                 echo 'Deploy Step'
-                sleep 5
             }
         }
          stage('Docker') {
